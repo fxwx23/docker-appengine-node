@@ -1,9 +1,9 @@
-FROM ubuntu:18.04
+FROM ubuntu:19.10
 LABEL maintainer "https://github.com/fxwx23"
 
 # GAE/Node.js build & testing environment for Circle CI 2.0
-ENV GCLOUD_SDK_VERSION 231.0.0
-ENV NODEJS_VERSION 8.15.0
+ENV GCLOUD_SDK_VERSION 318.0.0
+ENV NODEJS_VERSION 8.17.0
 
 RUN apt-get update && \
   ln -sf /usr/share/zoneinfo/UTC /etc/localtime && \
