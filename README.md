@@ -8,12 +8,12 @@ $ docker pull fxwx23/appengine-node
 ```
 
 ## Tags
-|Tag       | `latest`, `10` | `8`        |
-|:---------|:---------------|:-----------|
-|Node.js   |v10.21.0       |v8.17.0     |
-|Base      |ubuntu:19.10    |ubuntu:19.10|
-|Components|bq              |bq          |
-|          |gsutil          |gsutil      |
+|Tag       | `latest`, `12` | `10`        | `8`         |
+|:---------|:---------------|:------------|:------------|
+|Node.js   |v12.19.1        |v10.21.0     |v8.17.0      |
+|Base      |ubuntu:19.10    |ubuntu:19.10 |ubuntu:19.10 |
+|Components|bq              |bq           |bq           |
+|          |gsutil          |gsutil       |gsutil       |
 
 ※ Not supported so far below.
  - Other components like `cloud-datastore-emulator` , `pubsub-emulator` . 
@@ -32,10 +32,10 @@ core 2020.11.06
 gsutil 4.54
 
 $ docker run --rm -it fxwx23/appengine-node:latest node -v
-v10.21.0
+v12.19.1
 
 $ docker run --rm -it fxwx23/appengine-node:latest npm -v
-6.4.1
+6.14.8
 ```
 
 #### Circle CI 2.0
