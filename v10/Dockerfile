@@ -2,7 +2,7 @@ FROM ubuntu:19.10
 LABEL maintainer "https://github.com/fxwx23"
 
 # GAE/Node.js build & testing environment for Circle CI 2.0
-ENV GCLOUD_SDK_VERSION 318.0.0
+ENV GCLOUD_SDK_VERSION 331.0.0
 ENV NODEJS_VERSION 10.24.0
 
 RUN apt-get update && \
