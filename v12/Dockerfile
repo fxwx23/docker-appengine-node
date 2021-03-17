@@ -6,7 +6,7 @@ ENV GCLOUD_SDK_VERSION 331.0.0
 ENV NODEJS_VERSION 12.21.0
 
 RUN apt update && \ 
-  apt install software-properties-common && \
+  apt install -y software-properties-common && \
   add-apt-repository universe && \ 
   apt update && \
   ln -sf /usr/share/zoneinfo/UTC /etc/localtime && \
