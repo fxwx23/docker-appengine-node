@@ -8,12 +8,12 @@ $ docker pull fxwx23/appengine-node
 ```
 
 ## Tags
-|Tag       | `latest`, `12` | `10`        | `8`         |
-|:---------|:---------------|:------------|:------------|
-|Node.js   |v12.19.1        |v10.21.0     |v8.17.0      |
-|Base      |ubuntu:19.10    |ubuntu:19.10 |ubuntu:19.10 |
-|Components|bq              |bq           |bq           |
-|          |gsutil          |gsutil       |gsutil       |
+|Tag       |`latest`, `14`  |`12`        | `10`        | `8` (deprecated)         |
+|:---------|:---------------|:-----------|:------------|:-------------------------|
+|Node.js   |v14.16.0        |v12.21.0    |v10.24.0     |v8.17.0                   |
+|Base      |ubuntu:19.10    |ubuntu:19.10|ubuntu:19.10 |ubuntu:19.10              |
+|Components|bq              |bq          |bq           |bq                        |
+|          |gsutil          |gsutil      |gsutil       |gsutil                    |
 
 ※ Not supported so far below.
  - Other components like `cloud-datastore-emulator` , `pubsub-emulator` . 
@@ -26,16 +26,16 @@ Check the `gcloud` , `node` and `npm` commands:
 
 ```console
 $ docker run --rm -it fxwx23/appengine-node:latest gcloud version
-Google Cloud SDK 318.0.0
-bq 2.0.62
-core 2020.11.06
-gsutil 4.54
+Google Cloud SDK 331.0.0
+bq 2.0.65
+core 2021.03.05
+gsutil 4.59
 
 $ docker run --rm -it fxwx23/appengine-node:latest node -v
-v12.19.1
+v14.16.1
 
 $ docker run --rm -it fxwx23/appengine-node:latest npm -v
-6.14.8
+6.14.11
 ```
 
 #### Circle CI 2.0
