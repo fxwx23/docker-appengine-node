@@ -21,7 +21,7 @@ RUN apt update && \
   apt clean && \
   rm -rf /var/lib/apt/lists/*
 
-RUN curl https://bootstrap.pypa.io/get-pip.py --output get-pip.py && \
+RUN curl https://bootstrap.pypa.io/pip/2.7/get-pip.py --output get-pip.py && \
   python2 get-pip.py
 
 # setup Google Cloud SDK
