@@ -8,12 +8,12 @@ $ docker pull fxwx23/appengine-node
 ```
 
 ## Tags
-|Tag       |`latest`, `14`  |`12`        | `10`        | `8` (deprecated)         |
-|:---------|:---------------|:-----------|:------------|:-------------------------|
-|Node.js   |v14.16.0        |v12.21.0    |v10.24.0     |v8.17.0                   |
-|Base      |ubuntu:19.10    |ubuntu:19.10|ubuntu:19.10 |ubuntu:19.10              |
-|Components|bq              |bq          |bq           |bq                        |
-|          |gsutil          |gsutil      |gsutil       |gsutil                    |
+|Tag       |`latest`, `14`  |`12`         | `10`        | `8` (deprecated)         |
+|:---------|:---------------|:------------|:------------|:-------------------------|
+|Node.js   |v14.16.0        |v12.21.0     |v10.24.0     |v8.17.0                   |
+|Base      |ubuntu:20.04    |ubuntu:20.04 |ubuntu:20.04 |ubuntu:20.04              |
+|Components|bq              |bq           |bq           |bq                        |
+|          |gsutil          |gsutil       |gsutil       |gsutil                    |
 
 ※ Not supported so far below.
  - Other components like `cloud-datastore-emulator` , `pubsub-emulator` . 
