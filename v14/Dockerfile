@@ -3,7 +3,7 @@ LABEL maintainer "https://github.com/fxwx23"
 
 # GAE/Node.js build & testing environment for Circle CI 2.0
 ENV GCLOUD_SDK_VERSION 331.0.0
-ENV NODEJS_VERSION 12.21.0
+ENV NODEJS_VERSION 14.16.0
 
 RUN apt update && \ 
   apt install -y software-properties-common && \

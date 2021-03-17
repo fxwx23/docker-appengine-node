@@ -1,22 +1,28 @@
-FROM ubuntu:19.10
+FROM ubuntu:20.04
 LABEL maintainer "https://github.com/fxwx23"
 
 # GAE/Node.js build & testing environment for Circle CI 2.0
-ENV GCLOUD_SDK_VERSION 318.0.0
+ENV GCLOUD_SDK_VERSION 331.0.0
 ENV NODEJS_VERSION 8.17.0
 
-RUN apt-get update && \
+RUN apt update && \ 
+  apt install -y software-properties-common && \
+  add-apt-repository universe && \ 
+  apt update && \
   ln -sf /usr/share/zoneinfo/UTC /etc/localtime && \
-  apt-get install -y --no-install-recommends \
+  apt install -y --no-install-recommends \
   tzdata xvfb vim \
   curl ca-certificates \
   build-essential git unzip \
   ssh \
-  python \
+  python2 \
   gettext-base \
-  openjdk-11-jre-headless python-pip && \
-  apt-get clean && \
+  openjdk-11-jre-headless && \
+  apt clean && \
   rm -rf /var/lib/apt/lists/*
+
+RUN curl https://bootstrap.pypa.io/pip/2.7/get-pip.py --output get-pip.py && \
+  python2 get-pip.py
 
 # setup Google Cloud SDK
 ENV PATH=/google-cloud-sdk/bin:/google-cloud-sdk/:$PATH
