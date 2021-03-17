@@ -5,7 +5,9 @@ LABEL maintainer "https://github.com/fxwx23"
 ENV GCLOUD_SDK_VERSION 331.0.0
 ENV NODEJS_VERSION 10.24.0
 
-RUN add-apt-repository universe && \ 
+RUN apt update && \ 
+  apt install software-properties-common && \
+  add-apt-repository universe && \ 
   apt update && \
   ln -sf /usr/share/zoneinfo/UTC /etc/localtime && \
   apt install -y --no-install-recommends \
